@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Product {
     @Id
-    @NotNull(message = "must not be empty")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @NotEmpty(message = "must not be empty, have to be more than 3 length long")
     @Max(3)
