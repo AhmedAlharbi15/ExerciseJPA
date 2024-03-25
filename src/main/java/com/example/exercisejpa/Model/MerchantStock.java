@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class MerchantStock {
     @Id
-    @NotNull(message = "(must not be empty")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @NotEmpty(message = "(must not be empty")
     @Column(columnDefinition = "varchar(10) not null")
